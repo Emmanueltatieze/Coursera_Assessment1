@@ -4,10 +4,32 @@
     <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
   </head>
-  <body></body>
+  <body ng-app="Coursera_Assessment1">
+    <h1 style="text-align: center; color: blue">
+      <strong>Check if too much ....</strong>
+    </h1>
+    <div ng-controller="MyController" style="text-align: center">
+      <br />
+      <div>
+        <input
+          type="text"
+          placeholder="whrite your items seperated with a  ' , '"
+          style=" border-radius: 5px; width: 300px; height: 30px; border-color:{{colortext}}"
+          ng-model="text"
+        />
+      </div>
+
+      <br />
+      <div style="text-align: center">
+        <button class="btn-order" ng-click="response()">
+          Check if too much
+        </button>
+        <br />
+        <p style="color:{{colortext}} ">{{display()}}</p>
+      </div>
+    </div>
+  </body>
 </html>
